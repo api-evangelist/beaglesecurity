@@ -1,0 +1,12 @@
+generated: '2026-10-20'
+method: searched
+probe: true
+source: https://trust.beaglesecurity.com/
+url: https://trust.beaglesecurity.com/
+certifications:
+- ISO 27001
+evidence:
+- source: https://trust.beaglesecurity.com/
+  keywords:
+  - iso 27001
+  - trust center

@@ -1,0 +1,43 @@
+generated: '2026-10-20'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/beaglesecurity
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (beaglesecurity.com)
+  or its accepted GitHub org (beaglesecurity).'
+packages:
+- name: beagle-python-sdk
+  registry: github
+  url: https://github.com/beaglesecurity/beagle-python-sdk
+  language: Python
+  official: true
+  version: null
+  published: '2025-08-25'
+  source_repo: https://github.com/beaglesecurity/beagle-python-sdk
+  evidence: repository in github.com/beaglesecurity, whose profile names the provider's domain
+- name: n8n-nodes-beagle-security
+  registry: github
+  url: https://github.com/beaglesecurity/n8n-nodes-beagle-security
+  language: JavaScript
+  official: true
+  version: null
+  published: '2025-07-22'
+  source_repo: https://github.com/beaglesecurity/n8n-nodes-beagle-security
+  evidence: repository in github.com/beaglesecurity, whose profile names the provider's domain
+- name: sample-python-module-template
+  registry: github
+  url: https://github.com/beaglesecurity/sample-python-module-template
+  language: Python
+  official: true
+  version: null
+  published: '2023-01-13'
+  source_repo: https://github.com/beaglesecurity/sample-python-module-template
+  evidence: repository in github.com/beaglesecurity, whose profile names the provider's domain
+- name: beagle-java-sdk
+  registry: github
+  url: https://github.com/beaglesecurity/beagle-java-sdk
+  language: Java
+  official: true
+  version: null
+  published: '2021-09-29'
+  source_repo: https://github.com/beaglesecurity/beagle-java-sdk
+  evidence: repository in github.com/beaglesecurity, whose profile names the provider's domain

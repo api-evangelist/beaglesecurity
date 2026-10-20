@@ -1,6 +1,6 @@
 aid: beaglesecurity
 name: Beagle Security
-description: 'Beagle Security is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
+description: 'Beagle Security provides an AI-powered application security platform that offers comprehensive web application and API penetration testing, vulnerability identification, and actionable remediation insights. The service leverages automated scanning, manual testing, and AI analysis to help organizations secure their software supply chain and protect against emerging threats, catering to developers, security engineers, and enterprises across various industries.'
   and added to the network as a stub for full-pipeline profiling.'
 url: https://raw.githubusercontent.com/api-evangelist/beaglesecurity/refs/heads/main/apis.yml
 x-type: company
@@ -19,5 +19,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/beaglesecurity-trust-center.yml
+- type: DomainSecurity
+  url: security/beaglesecurity-domain-security.yml
 - type: Website
   url: https://beaglesecurity.com/

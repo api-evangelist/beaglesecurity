@@ -1,0 +1,545 @@
+openapi: 3.1.0
+info:
+  title: beaglesecurity API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 11 operation(s) read from 13 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; beaglesecurity has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 11
+    documentation: 0
+    pages-with-code: 13
+    pages-read: 13
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://beaglesecurity.com/developer/apidoc/v2/read-all
+  - https://beaglesecurity.com/developer/apidoc/v2/stop-test
+  - https://beaglesecurity.com/developer/apidoc/v2/start-test
+  - https://beaglesecurity.com/developer/apidoc/v2/user-tests
+  - https://beaglesecurity.com/developer/apidoc/v2/test-status
+  - https://beaglesecurity.com/developer/apidoc/v2/json-results
+  - https://beaglesecurity.com/developer/apidoc/v2/create-project
+  - https://beaglesecurity.com/developer/apidoc/v2/delete-project
+  - https://beaglesecurity.com/developer/apidoc/v2/modify-project
+  - https://beaglesecurity.com/developer/apidoc/v2/read-with-team
+  - https://beaglesecurity.com/developer/apidoc/v2/all-applications
+  - https://beaglesecurity.com/developer/apidoc/v2/domain-signature
+  - https://beaglesecurity.com/developer/apidoc/v2/team-test-result
+paths:
+  /rest/v2/applications:
+    get:
+      operationId: get_rest_v2_applications
+      tags:
+      - Rest
+      summary: GET /rest/v2/applications
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/all-applications
+      parameters:
+      - name: project_key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRestV2ApplicationsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/applications?project_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx''  --header
+          ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+  /rest/v2/applications/signature:
+    get:
+      operationId: get_rest_v2_applications_signature
+      tags:
+      - Rest
+      summary: GET /rest/v2/applications/signature
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/domain-signature
+      parameters:
+      - name: application_token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRestV2ApplicationsSignatureResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/applications/signature?application_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+  /rest/v2/projects:
+    delete:
+      operationId: delete_rest_v2_projects
+      tags:
+      - Rest
+      summary: DELETE /rest/v2/projects
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/delete-project
+      parameters:
+      - name: project_key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteRestV2ProjectsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request DELETE  ''https://api.beaglesecurity.com/rest/v2/projects?project_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx''  --header
+          ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+    get:
+      operationId: get_rest_v2_projects
+      tags:
+      - Rest
+      summary: GET /rest/v2/projects
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/read-all
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRestV2ProjectsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/projects''  --header ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+    post:
+      operationId: post_rest_v2_projects
+      tags:
+      - Rest
+      summary: POST /rest/v2/projects
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/create-project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRestV2ProjectsRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostRestV2ProjectsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request POST  ''https://api.beaglesecurity.com/rest/v2/projects''  --header ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Content-Type: application/json''  --data-raw ''{
+
+          "name": "My New Project",
+
+          "description": "A sample project for testing"
+
+          }'' '
+    put:
+      operationId: put_rest_v2_projects
+      tags:
+      - Rest
+      summary: PUT /rest/v2/projects
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/modify-project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutRestV2ProjectsRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutRestV2ProjectsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request PUT  ''https://api.beaglesecurity.com/rest/v2/projects''  --header ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Content-Type: application/json''  --data-raw ''{
+
+          "projectKey": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+
+          "name": "Default project",
+
+          "description": "This is a default project."
+
+          }'' '
+  /rest/v2/test/result:
+    get:
+      operationId: get_rest_v2_test_result
+      tags:
+      - Rest
+      summary: GET /rest/v2/test/result
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/json-results
+      parameters:
+      - name: application_token
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: result_token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/test/result?application_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&result_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+  /rest/v2/test/runningsessions:
+    get:
+      operationId: get_rest_v2_test_runningsessions
+      tags:
+      - Rest
+      summary: GET /rest/v2/test/runningsessions
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/user-tests
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRestV2TestRunningsessionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/test/runningsessions''  --header ''Authorization: Bearer
+          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+  /rest/v2/test/start:
+    post:
+      operationId: post_rest_v2_test_start
+      tags:
+      - Rest
+      summary: POST /rest/v2/test/start
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/start-test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRestV2TestStartRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostRestV2TestStartResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request POST  ''https://api.beaglesecurity.com/rest/v2/test/start''  --header ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Content-Type: application/json''  --data-raw ''{
+
+          "applicationToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+          }'' '
+  /rest/v2/test/status:
+    get:
+      operationId: get_rest_v2_test_status
+      tags:
+      - Rest
+      summary: GET /rest/v2/test/status
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/test-status
+      parameters:
+      - name: application_token
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: result_token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRestV2TestStatusResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET  ''https://api.beaglesecurity.com/rest/v2/test/status?application_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&result_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' '
+  /rest/v2/test/stop:
+    post:
+      operationId: post_rest_v2_test_stop
+      tags:
+      - Rest
+      summary: POST /rest/v2/test/stop
+      x-source: https://beaglesecurity.com/developer/apidoc/v2/stop-test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRestV2TestStopRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostRestV2TestStopResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request POST  ''https://api.beaglesecurity.com/rest/v2/test/stop''  --header ''Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''  --header
+          ''Content-Type: application/json''  --data-raw ''{
+
+          "applicationToken": "3frv64jxnaa89okc20jfyys1n8dwhgnx"
+
+          }'' '
+components:
+  schemas:
+    GetRestV2ApplicationsResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        applications:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              url:
+                type: string
+              applicationToken:
+                type: string
+              applicationType:
+                type: string
+              signatureStatus:
+                type: string
+              hostingType:
+                type: string
+    GetRestV2ApplicationsSignatureResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        url:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+        fileSignature:
+          type: object
+          properties:
+            signature:
+              type: string
+        dnsSignature:
+          type: object
+          properties:
+            type:
+              type: string
+            name:
+              type: string
+            value:
+              type: string
+        apiSignature:
+          type: object
+          properties:
+            type:
+              type: string
+            path:
+              type: string
+            value:
+              type: string
+    DeleteRestV2ProjectsResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        projectKey:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+    GetRestV2ProjectsResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        projects:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              projectKey:
+                type: string
+              applications:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    url:
+                      type: string
+                    applicationToken:
+                      type: string
+                    applicationType:
+                      type: string
+                    signatureStatus:
+                      type: string
+                    hostingType:
+                      type: string
+    PostRestV2ProjectsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    PostRestV2ProjectsResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        projectKey:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+    PutRestV2ProjectsRequest:
+      type: object
+      properties:
+        projectKey:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+    PutRestV2ProjectsResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        projectKey:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+    GetRestV2TestRunningsessionsResponse:
+      type: object
+      properties:
+        code:
+          type:
+          - string
+          - 'null'
+        message:
+          type:
+          - string
+          - 'null'
+        sessions:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              url:
+                type: string
+              applicationToken:
+                type: string
+              resultToken:
+                type: string
+              startTime:
+                type: integer
+    PostRestV2TestStartRequest:
+      type: object
+      properties:
+        applicationToken:
+          type: string
+    PostRestV2TestStartResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        statusUrl:
+          type: string
+        resultUrl:
+          type: string
+        resultToken:
+          type: string
+        message:
+          type: string
+    GetRestV2TestStatusResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        progress:
+          type: integer
+        code:
+          type: string
+        message:
+          type: string
+    PostRestV2TestStopRequest:
+      type: object
+      properties:
+        applicationToken:
+          type: string
+    PostRestV2TestStopResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Rest
