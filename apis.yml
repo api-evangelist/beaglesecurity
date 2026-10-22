@@ -1,26 +1,102 @@
 aid: beaglesecurity
+
 name: Beagle Security
-description: 'Beagle Security provides an AI-powered application security platform that offers comprehensive web application and API penetration testing, vulnerability identification, and actionable remediation insights. The service leverages automated scanning, manual testing, and AI analysis to help organizations secure their software supply chain and protect against emerging threats, catering to developers, security engineers, and enterprises across various industries.'
+
+image: https://beaglesecurity.com/images/og/beagle-og.webp
+
+description: 'Beagle Security offers an AI-powered application security platform delivering comprehensive web application and API penetration testing, vulnerability identification, and actionable remediation insights. Leveraging automated scanning, manual testing, and AI analysis, it helps organizations secure their software supply chain and protect against emerging threats, serving developers, security engineers, and enterprises across multiple industries.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beaglesecurity/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
 - Company
-apis: []
+- Security
+- AI
+- Penetration-Testing
+- DevSecOps
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/beaglesecurity-plans-pricing.yml
+- type: Spectral
+  url: rules/beaglesecurity-rules.yml
+- type: JSONLD
+  url: json-ld/beaglesecurity-context.jsonld
+- type: Vocabulary
+  url: vocabulary/beaglesecurity-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/beaglesecurity-data-model.yml
+- type: Compliance
+  url: https://trust.beaglesecurity.com/
+- type: Authentication
+  url: authentication/beaglesecurity-authentication.yml
+- type: Conformance
+  url: conformance/beaglesecurity-conformance.yml
+- type: Hosts
+  url: hosts/beaglesecurity-hosts.yml
+- type: Vendors
+  url: vendors/beaglesecurity-vendors.yml
+- type: SDKs
+  url: packages/beaglesecurity-packages.yml
+- type: Packages
+  url: packages/beaglesecurity-packages.yml
+- type: Support
+  url: https://help.beaglesecurity.com
+- type: StatusPage
+  url: https://status.beaglesecurity.com/
+- type: Security
+  url: https://beaglesecurity.com/security
+- type: Newsroom
+  url: https://beaglesecurity.com/press
+- type: DeveloperPortal
+  url: https://beaglesecurity.com/developer
+- type: APIReference
+  url: https://beaglesecurity.com/developer/apidoc/v2
+- type: GitHubOrganization
+  url: https://github.com/beaglesecurity
 - type: TrustCenter
   url: security/beaglesecurity-trust-center.yml
 - type: DomainSecurity
   url: security/beaglesecurity-domain-security.yml
 - type: Website
   url: https://beaglesecurity.com/
+- type: Documentation
+  url: https://beaglesecurity.com/developer/
+- type: Blog
+  url: https://beaglesecurity.com/blog/
+- type: Pricing
+  url: https://beaglesecurity.com/pricing
+- type: TermsOfService
+  url: https://beaglesecurity.com/terms
+- type: PrivacyPolicy
+  url: https://beaglesecurity.com/privacy
+
+apis: []
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 14
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

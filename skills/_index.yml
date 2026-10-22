@@ -1,0 +1,12 @@
+generated: '2026-10-21'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml
+skills:
+- file: skills/beaglesecurity-run-test.md
+  name: beaglesecurity-run-test
+  api: openapi/_ae-authored/beaglesecurity-openapi-generated.yml
+  operations:
+  - post_rest_v2_test_start
+  - get_rest_v2_test_status
+  - post_rest_v2_test_stop

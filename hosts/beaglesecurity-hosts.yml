@@ -1,0 +1,134 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - source
+  - status
+  - support
+  - website
+hosts:
+- host: api.beaglesecurity.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: beaglesecurity.com
+  role: api
+  relation: own
+- host: app.beaglesecurity.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: beaglesecurity.com
+  role: other
+  relation: own
+- host: beaglesecurity.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - Newsroom
+  - DeveloperPortal
+  - APIReference
+  - Website
+  - Documentation
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: beaglesecurity.com
+  role: website
+  relation: own
+- host: demo.beaglesecurity.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: beaglesecurity.com
+  role: other
+  relation: own
+- host: feedback.beaglesecurity.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: beaglesecurity.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: help.beaglesecurity.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - Support
+  serves:
+  - docs
+  registrable_domain: beaglesecurity.com
+  role: support
+  relation: own
+- host: status.beaglesecurity.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: beaglesecurity.com
+  role: status
+  relation: own
+- host: trust.beaglesecurity.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Compliance
+  serves: []
+  platform: app.sprinto.com
+  registrable_domain: beaglesecurity.com
+  role: other
+  relation: own

@@ -1,0 +1,36 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://beaglesecurity.com/pricing
+sources:
+- https://beaglesecurity.com/pricing
+- https://help.beaglesecurity.com/en/category/pricing-payment-1awp9iv/
+name: Beagle Security pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Essential
+  price_text: $ 99 per month
+  price: 99
+  billing_period: monthly
+  features:
+  - 2 tests/month
+  - 1 concurrent tests
+  - 5 team members
+- name: Advanced
+  price_text: $ 299 per month
+  price: 299
+  billing_period: monthly
+  features:
+  - 15 tests/month
+  - 4 concurrent tests
+  - 15 team members
+- name: Custom
+  price_text: Talk to our team
+- name: Free
+  price_text: Free
+  features:
+  - 1 lite test/month
+  - Monthly surface scan reports
+  - SSL & domain expiry monitoring
+docs: https://beaglesecurity.com/pricing

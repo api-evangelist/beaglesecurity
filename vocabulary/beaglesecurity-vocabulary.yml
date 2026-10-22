@@ -1,0 +1,85 @@
+generated: '2026-10-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml
+vocabulary:
+  name: Beagle Security Domain Vocabulary
+  description: 'Terms declared by Beagle Security''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-22'
+  terms:
+  - term: GetRestV2ApplicationsResponse
+    definition: 'Object declared by the contract with fields: code, message, applications.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/GetRestV2ApplicationsResponse
+  - term: GetRestV2ApplicationsSignatureResponse
+    definition: 'Object declared by the contract with fields: status, url, code, message, fileSignature, dnsSignature, apiSignature.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/GetRestV2ApplicationsSignatureResponse
+  - term: DeleteRestV2ProjectsResponse
+    definition: 'Object declared by the contract with fields: name, description, projectKey, code, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/DeleteRestV2ProjectsResponse
+  - term: GetRestV2ProjectsResponse
+    definition: 'Object declared by the contract with fields: code, message, projects.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/GetRestV2ProjectsResponse
+  - term: PostRestV2ProjectsRequest
+    definition: 'Object declared by the contract with fields: name, description.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2ProjectsRequest
+  - term: PostRestV2ProjectsResponse
+    definition: 'Object declared by the contract with fields: name, description, projectKey, code, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2ProjectsResponse
+  - term: PutRestV2ProjectsRequest
+    definition: 'Object declared by the contract with fields: projectKey, name, description.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PutRestV2ProjectsRequest
+  - term: PutRestV2ProjectsResponse
+    definition: 'Object declared by the contract with fields: name, description, projectKey, code, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PutRestV2ProjectsResponse
+  - term: GetRestV2TestRunningsessionsResponse
+    definition: 'Object declared by the contract with fields: code, message, sessions.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/GetRestV2TestRunningsessionsResponse
+  - term: PostRestV2TestStartRequest
+    definition: 'Object declared by the contract with fields: applicationToken.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2TestStartRequest
+  - term: PostRestV2TestStartResponse
+    definition: 'Object declared by the contract with fields: code, statusUrl, resultUrl, resultToken, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2TestStartResponse
+  - term: GetRestV2TestStatusResponse
+    definition: 'Object declared by the contract with fields: status, progress, code, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/GetRestV2TestStatusResponse
+  - term: PostRestV2TestStopRequest
+    definition: 'Object declared by the contract with fields: applicationToken.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2TestStopRequest
+  - term: PostRestV2TestStopResponse
+    definition: 'Object declared by the contract with fields: code, message.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml#/components/schemas/PostRestV2TestStopResponse
+  - term: Rest
+    definition: 'Resource group in the contract; its operation GET /rest/v2/applications: GET /rest/v2/applications'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/beaglesecurity-openapi-generated.yml

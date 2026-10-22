@@ -1,9 +1,9 @@
-generated: '2026-10-20'
+generated: '2026-10-21'
 method: probed
 generator: harvest-packages.py
 source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/beaglesecurity
-ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (beaglesecurity.com)
-  or its accepted GitHub org (beaglesecurity).'
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (beaglesecurity.com,
+  security/beaglesecurity-domain-security.yml, security/beaglesecurity-trust-center.yml) or its accepted GitHub org (beaglesecurity).'
 packages:
 - name: beagle-python-sdk
   registry: github

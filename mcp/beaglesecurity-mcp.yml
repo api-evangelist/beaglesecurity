@@ -1,7 +1,6 @@
-generated: "2026-10-20"
-method: none
-type: MCPServer
+generated: '2026-10-21'
+method: derived
+source: []
 deployment:
   mode: none
-  auth: unknown
   verified: derived

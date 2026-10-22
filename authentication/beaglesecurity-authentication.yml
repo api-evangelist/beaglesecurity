@@ -1,0 +1,16 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://help.beaglesecurity.com/en/category/authenticated-testing-j6hwnx/
+sources:
+- https://help.beaglesecurity.com/en/category/authenticated-testing-j6hwnx/
+- https://beaglesecurity.com/developer/apidoc/v2/application-token
+description: Authentication schemes for Beagle Security API
+schemes:
+- type: http-bearer
+  name: Bearer token
+  evidence: Authorization Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  location: header
+  header: Authorization
+  how_to_obtain: Generated from Beagle security settings -> Access token
+docs: https://help.beaglesecurity.com/en/category/authenticated-testing-j6hwnx/
